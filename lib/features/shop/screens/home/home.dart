@@ -1,4 +1,3 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_ecommerce/common/widgets/shimmers/vertical_product_shimmer.dart';
 import 'package:flutter_ecommerce/features/shop/screens/all_products/all_products.dart';
@@ -38,7 +37,6 @@ class HomeScreen extends StatelessWidget {
                   /// Search bar
                   TSearchContainer(
                     text: 'Search in Store',
-
                   ),
                   SizedBox(
                     height: TSizes.spaceBtwSections,
@@ -83,7 +81,7 @@ class HomeScreen extends StatelessWidget {
                     title: 'Popular Products',
                     onPressed: () => Get.to(() => AllProducts(
                           title: 'Popular products',
-                      futureMethod: controller.fetchAllFeaturedProducts(),
+                          futureMethod: controller.fetchAllFeaturedProducts(),
                         )),
                   ),
                   const SizedBox(
